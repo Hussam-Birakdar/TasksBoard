@@ -10,7 +10,7 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    //new
+    //new test commit
     /**
      * The attributes that are mass assignable.
      *
