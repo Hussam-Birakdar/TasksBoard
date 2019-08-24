@@ -1,0 +1,52 @@
+body{
+    background: #F5F6F9;
+}
+.text-grey{
+    color: rgba(0,0,0,0.4);
+}
+.line-through{
+    text-decoration: line-through;
+}
+.-mx-3{
+    margin: 0 -12px;
+}
+.no-underline {
+    text-decoration: none !important
+}
+
+.button{
+    background-color: #47cdff;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 14px;
+    box-shadow: 0 2px 7px 0 #b0eaff;
+}
+
+.text-md{
+    font-size: 18px;
+}
+
+.project-card h3{
+    margin-left: -24px;
+    border-left: 4px solid #8ae2fe;
+    padding-left: 20px;
+
+}
+
+.text-black{
+    color: #000;
+}
+.text-red{
+    color: red;
+}
+
+.card{
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    padding: 24px;
+}
+
+.h-150{
+    height: 200px;
+}
