@@ -53,7 +53,7 @@ trait RecordsActivity
 
 		}
 
-		return  ['created', 'updated', 'deleted'];
+		return  ['created', 'updated'];
 	}
 
 
