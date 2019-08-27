@@ -50,3 +50,7 @@ body{
 .h-150{
     height: 200px;
 }
+
+.w-40{
+    width: 40px !important;
+}

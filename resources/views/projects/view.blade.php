@@ -9,7 +9,24 @@
         <h2 class="no-underline text-grey text-md">
             <a class="no-underline text-grey" href="/projects">My Projects</a> / {{$project->title}}
         </h2>
-        <a href="{{$project->path().'/edit'}}" class="button py-2 px-4 no-underline">Edit Project</a>
+
+        <div class="d-flex align-items-center">
+
+            @foreach($project->members as $member)
+                <img
+                        src="{{gravatar_url($member->email)}}"
+                        alt="{{$member->name}}'s avatar"
+                        class="rounded-circle w-40 mr-2">
+
+            @endforeach
+                <img
+                        src="{{gravatar_url($project->owner->email)}}"
+                        alt="{{$project->owner->name}}'s avatar"
+                        class="rounded-circle w-40 mr-2">
+
+            <a href="{{$project->path().'/edit'}}" class="button py-2 px-4 no-underline ml-4">Edit Project</a>
+
+        </div>
     </header>
 
     <main>
@@ -55,6 +72,8 @@
                         placeholder="Anything spacial you want to make note of?">{{$project->notes}}</textarea>
                         <button class="btn-primary btn" type="submit">Save</button>
                     </form>
+
+                    @include('errors')
                 </div>
 
 
@@ -62,6 +81,12 @@
             <div class="col-sm-12 col-lg-4  px-3" >
                 @include('projects.card')
                 @include('projects.activity.card')
+
+                @can('manage',$project)
+                    @include('projects.invite')
+                @endcan
+
+
 
             </div>
         </div>

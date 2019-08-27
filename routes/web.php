@@ -1,7 +1,6 @@
 <?php
 
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,6 +20,8 @@ Route::get('/', function () {
 Route::group(['middleware'=>'auth'],function (){
 
 	Route::resource('projects','ProjectController');
+
+	Route::post('projects/{project}/invitations','ProjectInvitationsController@store');
 
 	Route::get('/projects/{project}/tasks','ProjectTasksController@create');
 	Route::post('/projects/{project}/tasks','ProjectTasksController@store');
